@@ -1,26 +1,37 @@
-import React from "react";
+import React, { FC, useState, useEffect } from 'react';
 
-export const Header = ({ text, value }) => {
+export interface HeaderProps {
+  value: number;
+}
+
+export const Header: React.FC<HeaderProps> = ({ value }) => {
+  const [headerState, setHeaderState] = useState<number | null>(null);
+
+  // Используем useEffect для обновления headerState при изменении value
+  useEffect(() => {
+    setHeaderState(value);
+  }, [value]);
+
   let HeaderElement = null;
 
-  switch (value) {
+  switch (headerState) {
     case 1:
-      HeaderElement = <h1>{text}</h1>;
+      HeaderElement = <h1>This is header h1</h1>;
       break;
     case 2:
-      HeaderElement = <h2>{text}</h2>;
+      HeaderElement = <h2>This is header h2</h2>;
       break;
     case 3:
-      HeaderElement = <h3>{text}</h3>;
+      HeaderElement = <h3>This is header h3</h3>;
       break;
     case 4:
-      HeaderElement = <h4>{text}</h4>;
+      HeaderElement = <h4>This is header h4</h4>;
       break;
     case 5:
-      HeaderElement = <h5>{text}</h5>;
+      HeaderElement = <h5>This is header h5</h5>;
       break;
     case 6:
-      HeaderElement = <h6>{text}</h6>;
+      HeaderElement = <h6>This is header h6</h6>;
       break;
     default:
       HeaderElement = null;

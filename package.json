@@ -2,7 +2,6 @@
   "name": "react-1",
   "version": "1.0.0",
   "description": "",
- 
   "scripts": {
     "start": "webpack-dev-server --define-process-env-node-env development",
     "build": "webpack build --define-process-env-node-env production",
