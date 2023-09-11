@@ -11,6 +11,9 @@ export const Select = ({
     { value: 'Header', text: 'Header' },
     { value: 'Text', text: 'Text' },
     { value: 'Break', text: 'Break' },
+    { value: 'UnfoldingBlock', text: 'UnfoldingBlock' },
+    { value: 'Image', text: 'Image' },
+    { value: 'Notning', text: 'Notning' },
   ];
   const [selected, setSelected] = React.useState(options[0].value);
 

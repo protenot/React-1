@@ -12,6 +12,20 @@ import { useState } from 'react';
   } */
 
 export const App = () => {
+  //Состояние для хранения блоков добавленных на страницу
+  const [blocks, setBlocks] = useState<string[]>([]);
+  // обновляем состояние когда пользователь выбирает блок
+
+  const handleSelectBlock = (selectedValue: string) => {
+    if (selectedValue === 'Nothing') {
+      // Если выбрано "Nothing", очищаем все блоки
+      setBlocks([]);
+    } else {
+      // В противном случае добавляем выбранный блок к списку
+      setBlocks([...blocks, selectedValue]);
+    }
+  };
+  // Состояние основного селектора
   const [selectedOption, setSelectedOption] = useState('');
   const handleSelectChange = (selectedValue: React.SetStateAction<string>) => {
     setSelectedOption(selectedValue);
@@ -24,44 +38,37 @@ export const App = () => {
   const handleSelectType = (newTypeValue: React.SetStateAction<string>) => {
     setSelectedType(newTypeValue);
   };
-  switch (selectedOption) {
-    case 'Header':
-      return (
-        <>
-          <Select onSelectChange={handleSelectChange}></Select>
-          <Input onInputChange={handleInputChange}></Input>
-          <Header value={parseInt(inputValue)}></Header>
-        </>
-      );
-    case 'Text':
-      return (
-        <>
-          <Select onSelectChange={handleSelectChange}></Select>
-          <Input onInputChange={handleInputChange}></Input>
-          <Header value={parseInt(inputValue)}></Header>
-          <SelectTypeText
-            onSelectTypeChange={handleSelectType}
-          ></SelectTypeText>
-          <Text font={selectedType}></Text>
-        </>
-      );
-    case 'Break':
-      return (
-        <>
-          <Select onSelectChange={handleSelectChange}></Select>
-          <Input onInputChange={handleInputChange}></Input>
-          <Header value={parseInt(inputValue)}></Header>
-          <SelectTypeText
-            onSelectTypeChange={handleSelectType}
-          ></SelectTypeText>
-          <Text font={selectedType}></Text>
-          <Break />
-        </>
-      );
-  }
+
+  const renderBlock = (blockType: string) => {
+    switch (blockType) {
+      case 'Header':
+        return (
+          <>
+            <Input onInputChange={handleInputChange}></Input>
+            <Header value={parseInt(inputValue)}></Header>
+          </>
+        );
+      case 'Text':
+        return (
+          <>
+            <SelectTypeText
+              onSelectTypeChange={handleSelectType}
+            ></SelectTypeText>
+            <Text font={selectedType}></Text>
+          </>
+        );
+      case 'Break':
+        return <Break />;
+      default:
+        return null;
+    }
+  };
   return (
     <>
-      <Select onSelectChange={handleSelectChange}></Select>
+      <Select onSelectChange={handleSelectBlock}></Select>
+      {blocks.map((block, index) => (
+        <div key={index}>{renderBlock(block)}</div>
+      ))}
     </>
   );
 };
