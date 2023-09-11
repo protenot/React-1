@@ -26,10 +26,10 @@ export const App = () => {
     }
   };
   // Состояние основного селектора
-  const [selectedOption, setSelectedOption] = useState('');
+  /* const [selectedOption, setSelectedOption] = useState('');
   const handleSelectChange = (selectedValue: React.SetStateAction<string>) => {
     setSelectedOption(selectedValue);
-  };
+  }; */
   const [inputValue, setInputValue] = useState('');
   const handleInputChange = (newValue: React.SetStateAction<string>) => {
     setInputValue(newValue);
@@ -59,9 +59,13 @@ export const App = () => {
         );
       case 'Break':
         return <Break />;
+        case "Nothing":
+            return <></>
       default:
         return null;
+    
     }
+    
   };
   return (
     <>

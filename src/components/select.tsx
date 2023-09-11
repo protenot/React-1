@@ -13,7 +13,7 @@ export const Select = ({
     { value: 'Break', text: 'Break' },
     { value: 'UnfoldingBlock', text: 'UnfoldingBlock' },
     { value: 'Image', text: 'Image' },
-    { value: 'Notning', text: 'Notning' },
+    { value: 'Nothing', text: 'Nothing' },
   ];
   const [selected, setSelected] = React.useState(options[0].value);
 
