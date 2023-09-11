@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
-import { Header } from './components/header';
+import { Header } from './components/Header/header';
 
 const container: HTMLElement | null = document.getElementById('root');
 const root = createRoot(container as HTMLElement);

@@ -1,5 +1,5 @@
 import { type } from 'os';
-import { FontStyle } from './text';
+import { FontStyle } from '../Text/text';
 import React, { useState } from 'react';
 
 type OnSelectTypeChange = (selectedType: FontStyle) => void;

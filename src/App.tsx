@@ -1,11 +1,11 @@
 import React from 'react';
-import { Header } from './components/header';
-import { Input } from './components/input';
-import { Select } from './components/select';
-import { Text } from './components/text';
-import { SelectTypeText } from './components/selectText';
-import { Break } from './components/break';
-import { HeaderProps } from './components/header';
+import { Header } from './components/Header/header';
+import { Input } from './components/Input/input';
+import { Select } from './components/Select/select';
+import { Text } from './components/Text/text';
+import { SelectTypeText } from './components/SelectTypeText/selectText';
+import { Break } from './components/Break/break';
+import { HeaderProps } from './components/Header/header';
 import { useState } from 'react';
 export const Kittens =require( './img/Kittens.jpg');
 /* export interface AppProps {
