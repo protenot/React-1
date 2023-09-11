@@ -10,6 +10,7 @@ export const Select = ({
     { value: '', text: '--Choose an option--' },
     { value: 'Header', text: 'Header' },
     { value: 'Text', text: 'Text' },
+    { value: 'Break', text: 'Break' },
   ];
   const [selected, setSelected] = React.useState(options[0].value);
 
@@ -23,7 +24,7 @@ export const Select = ({
   };
   return (
     <>
-      <h1 className="title">Select what do you want to see</h1>
+      {/* <h1 className="title">Select what do you want to see</h1> */}
       <label>
         Select what do you want to see
         <select

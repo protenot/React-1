@@ -2,6 +2,9 @@ import React from 'react';
 import { Header } from './components/header';
 import { Input } from './components/input';
 import { Select } from './components/select';
+import { Text } from './components/text';
+import { SelectTypeText } from './components/selectText';
+import { Break } from './components/break';
 import { HeaderProps } from './components/header';
 import { useState } from 'react';
 /* export interface AppProps {
@@ -9,10 +12,6 @@ import { useState } from 'react';
   } */
 
 export const App = () => {
-  // useState(option)
-  //  console.log(HeaderElement)
-  //return<Input onInputChange={handleInputChange}></Input>
-
   const [selectedOption, setSelectedOption] = useState('');
   const handleSelectChange = (selectedValue: React.SetStateAction<string>) => {
     setSelectedOption(selectedValue);
@@ -21,7 +20,10 @@ export const App = () => {
   const handleInputChange = (newValue: React.SetStateAction<string>) => {
     setInputValue(newValue);
   };
-
+  const [selectedType, setSelectedType] = useState('');
+  const handleSelectType = (newTypeValue: React.SetStateAction<string>) => {
+    setSelectedType(newTypeValue);
+  };
   switch (selectedOption) {
     case 'Header':
       return (
@@ -29,6 +31,31 @@ export const App = () => {
           <Select onSelectChange={handleSelectChange}></Select>
           <Input onInputChange={handleInputChange}></Input>
           <Header value={parseInt(inputValue)}></Header>
+        </>
+      );
+    case 'Text':
+      return (
+        <>
+          <Select onSelectChange={handleSelectChange}></Select>
+          <Input onInputChange={handleInputChange}></Input>
+          <Header value={parseInt(inputValue)}></Header>
+          <SelectTypeText
+            onSelectTypeChange={handleSelectType}
+          ></SelectTypeText>
+          <Text font={selectedType}></Text>
+        </>
+      );
+    case 'Break':
+      return (
+        <>
+          <Select onSelectChange={handleSelectChange}></Select>
+          <Input onInputChange={handleInputChange}></Input>
+          <Header value={parseInt(inputValue)}></Header>
+          <SelectTypeText
+            onSelectTypeChange={handleSelectType}
+          ></SelectTypeText>
+          <Text font={selectedType}></Text>
+          <Break />
         </>
       );
   }
