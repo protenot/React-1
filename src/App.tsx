@@ -7,6 +7,7 @@ import { SelectTypeText } from './components/selectText';
 import { Break } from './components/break';
 import { HeaderProps } from './components/header';
 import { useState } from 'react';
+export const Kittens =require( './img/Kittens.jpg');
 /* export interface AppProps {
     Header: React.ComponentType;
   } */
@@ -26,10 +27,10 @@ export const App = () => {
     }
   };
   // Состояние основного селектора
-  /* const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
   const handleSelectChange = (selectedValue: React.SetStateAction<string>) => {
     setSelectedOption(selectedValue);
-  }; */
+  };
   const [inputValue, setInputValue] = useState('');
   const handleInputChange = (newValue: React.SetStateAction<string>) => {
     setInputValue(newValue);
@@ -59,6 +60,8 @@ export const App = () => {
         );
       case 'Break':
         return <Break />;
+        case "Image":
+            return<img  src={Kittens} alt="Kittens" width={200} height={300}></img>
         case "Nothing":
             return <></>
       default:
@@ -73,6 +76,7 @@ export const App = () => {
       {blocks.map((block, index) => (
         <div key={index}>{renderBlock(block)}</div>
       ))}
+      
     </>
   );
 };

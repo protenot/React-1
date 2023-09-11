@@ -35,7 +35,7 @@ module.exports = {
       : "eval-source-map",
 
   resolve: {
-    extensions: [".js", ".ts", ".tsx", "jsx"],
+    extensions: [".js", ".ts", ".tsx", ".jsx"],
   },
   module: {
     rules: [
