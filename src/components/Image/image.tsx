@@ -1,8 +1,7 @@
 import React from 'react';
-import { Kittens } from '../../App';
-//import Image from 'next/image'
-//import Kittens from "./img"
-interface ImageProps {
+
+
+export interface ImageProps {
   src: string;
   alt: string;
   width: number;
