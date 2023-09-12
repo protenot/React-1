@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from './components/Image/image';
 import { Header } from './components/Header/header';
 import { Input } from './components/Input/input';
 import { Select } from './components/Select/select';
@@ -7,7 +8,8 @@ import { SelectTypeText } from './components/SelectTypeText/selectText';
 import { Break } from './components/Break/break';
 import { HeaderProps } from './components/Header/header';
 import { useState } from 'react';
-export const Kittens =require( './img/Kittens.jpg');
+import { UnfoldingBlock } from './components/UnfoldingBlock/block';
+export const Kittens = require('./img/Kittens.jpg');
 /* export interface AppProps {
     Header: React.ComponentType;
   } */
@@ -27,11 +29,10 @@ export const App = () => {
     }
   };
   // Состояние основного селектора
-  const [selectedOption, setSelectedOption] = useState('');
+  /*  const [selectedOption, setSelectedOption] = useState('');
   const handleSelectChange = (selectedValue: React.SetStateAction<string>) => {
     setSelectedOption(selectedValue);
-  };
-  const [inputValue, setInputValue] = useState('');
+  } */ const [inputValue, setInputValue] = useState('');
   const handleInputChange = (newValue: React.SetStateAction<string>) => {
     setInputValue(newValue);
   };
@@ -39,6 +40,11 @@ export const App = () => {
   const handleSelectType = (newTypeValue: React.SetStateAction<string>) => {
     setSelectedType(newTypeValue);
   };
+  //Прописываем состояние для статьи
+  /*  const [openedBlock, setOpened] = React.useState(null);
+  const handleBlockOpen = () => {
+    setOpened(openedBlock);
+  }; */
 
   const renderBlock = (blockType: string) => {
     switch (blockType) {
@@ -60,15 +66,17 @@ export const App = () => {
         );
       case 'Break':
         return <Break />;
-        case "Image":
-            return<img  src={Kittens} alt="Kittens" width={200} height={300}></img>
-        case "Nothing":
-            return <></>
+      case 'UnfoldingBlock':
+        return <UnfoldingBlock></UnfoldingBlock>;
+      case 'Image':
+        return (
+          <Image src={Kittens} alt="Kittens" width={200} height={300}></Image>
+        );
+      case 'Nothing':
+        return <></>;
       default:
         return null;
-    
     }
-    
   };
   return (
     <>
@@ -76,7 +84,6 @@ export const App = () => {
       {blocks.map((block, index) => (
         <div key={index}>{renderBlock(block)}</div>
       ))}
-      
     </>
   );
 };

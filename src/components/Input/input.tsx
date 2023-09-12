@@ -5,7 +5,7 @@ export const Input = ({ onInputChange }: { onInputChange: OnInputChange }) => {
   // Фиксируем state
   const [inputValue, setInputValue] = useState('');
   //Обработчик ввода
-  const handleInputChange = (event: any) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     //Присваиваем состояние
     const newValue = event.target.value;
     // Фиксируем новый стейт

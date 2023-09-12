@@ -14,6 +14,10 @@ export const Text: React.FC<TextProps> = ({ font }) => {
   const textContent: string =
     'Joy prepared poor. Good believing prevent. Amiable admiration meritsresources waiting sight no father hunted plenty alteration mrs welcome nor. Since mutual little over betrayed returned elderly extremity girl wondered entrance herself amiable is behaved interested concluded. Change morning letter uneasy horses attempt sportsman spot we my.';
 
-  return <p style={{ fontStyle: fontState }}>{textContent}</p>;
+  return (
+    <p className="text" style={{ fontStyle: fontState }}>
+      {textContent}
+    </p>
+  );
   //console.log(font-style)
 };
