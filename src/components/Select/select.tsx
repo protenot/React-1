@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 type SelectChangeHandler = (selectedValue: string) => void;
 
 export const Select = ({
@@ -7,13 +7,13 @@ export const Select = ({
   onSelectChange: SelectChangeHandler;
 }) => {
   const options = [
-    { value: "", text: "--Choose an option--" },
-    { value: "Header", text: "Header" },
-    { value: "Text", text: "Text" },
-    { value: "Break", text: "Break" },
-    { value: "UnfoldingBlock", text: "UnfoldingBlock" },
-    { value: "Image", text: "Image" },
-    { value: "Nothing", text: "Nothing" },
+    { value: '', text: '--Choose an option--' },
+    { value: 'Header', text: 'Header' },
+    { value: 'Text', text: 'Text' },
+    { value: 'Break', text: 'Break' },
+    { value: 'UnfoldingBlock', text: 'UnfoldingBlock' },
+    { value: 'Image', text: 'Image' },
+    { value: 'Nothing', text: 'Nothing' },
   ];
   const [selected, setSelected] = React.useState(options[0].value);
 

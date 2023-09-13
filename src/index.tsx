@@ -1,9 +1,9 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { App } from "./App";
-import { Header } from "./components/Header/header";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from './App';
+import { Header } from './components/Header/header';
 
-const container: HTMLElement | null = document.getElementById("root");
+const container: HTMLElement | null = document.getElementById('root');
 const root = createRoot(container as HTMLElement);
 
 if (container) {
@@ -12,5 +12,5 @@ if (container) {
   };
   root.render(<App />);
 } else {
-  console.error("Container element not found");
+  console.error('Container element not found');
 }
