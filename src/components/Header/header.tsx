@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect } from "react";
 
 export interface HeaderProps {
   value: number;
@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ value }) => {
       HeaderElement = <h2>This is header h2</h2>;
       break;
     case 3:
-      HeaderElement = <h3 className='h3-title'>This is header h3</h3>;
+      HeaderElement = <h3 className="h3-title">This is header h3</h3>;
       break;
     case 4:
       HeaderElement = <h4>This is header h4</h4>;

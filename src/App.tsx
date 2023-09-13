@@ -1,15 +1,15 @@
-import React from 'react';
-import { Image } from './components/Image/image';
-import { Header } from './components/Header/header';
-import { Input } from './components/Input/input';
-import { Select } from './components/Select/select';
-import { Text } from './components/Text/text';
-import { SelectTypeText } from './components/SelectTypeText/selectText';
-import { Break } from './components/Break/break';
-import { HeaderProps } from './components/Header/header';
-import { useState } from 'react';
-import { UnfoldingBlock } from './components/UnfoldingBlock/block';
-export const Kittens = require('./img/Kittens.jpg');
+import React from "react";
+import { Image } from "./components/Image/image";
+import { Header } from "./components/Header/header";
+import { Input } from "./components/Input/input";
+import { Select } from "./components/Select/select";
+import { Text } from "./components/Text/text";
+import { SelectTypeText } from "./components/SelectTypeText/selectText";
+import { Break } from "./components/Break/break";
+import { HeaderProps } from "./components/Header/header";
+import { useState } from "react";
+import { UnfoldingBlock } from "./components/UnfoldingBlock/block";
+export const Kittens = require("./img/Kittens.jpg");
 /* export interface AppProps {
     Header: React.ComponentType;
   } */
@@ -20,7 +20,7 @@ export const App = () => {
   // обновляем состояние когда пользователь выбирает блок
 
   const handleSelectBlock = (selectedValue: string) => {
-    if (selectedValue === 'Nothing') {
+    if (selectedValue === "Nothing") {
       // Если выбрано "Nothing", очищаем все блоки
       setBlocks([]);
     } else {
@@ -32,11 +32,11 @@ export const App = () => {
   /*  const [selectedOption, setSelectedOption] = useState('');
   const handleSelectChange = (selectedValue: React.SetStateAction<string>) => {
     setSelectedOption(selectedValue);
-  } */ const [inputValue, setInputValue] = useState('');
+  } */ const [inputValue, setInputValue] = useState("");
   const handleInputChange = (newValue: React.SetStateAction<string>) => {
     setInputValue(newValue);
   };
-  const [selectedType, setSelectedType] = useState('');
+  const [selectedType, setSelectedType] = useState("");
   const handleSelectType = (newTypeValue: React.SetStateAction<string>) => {
     setSelectedType(newTypeValue);
   };
@@ -48,14 +48,14 @@ export const App = () => {
 
   const renderBlock = (blockType: string) => {
     switch (blockType) {
-      case 'Header':
+      case "Header":
         return (
           <>
             <Input onInputChange={handleInputChange}></Input>
             <Header value={parseInt(inputValue)}></Header>
           </>
         );
-      case 'Text':
+      case "Text":
         return (
           <>
             <SelectTypeText
@@ -64,15 +64,15 @@ export const App = () => {
             <Text font={selectedType}></Text>
           </>
         );
-      case 'Break':
+      case "Break":
         return <Break />;
-      case 'UnfoldingBlock':
+      case "UnfoldingBlock":
         return <UnfoldingBlock></UnfoldingBlock>;
-      case 'Image':
+      case "Image":
         return (
           <Image src={Kittens} alt="Kittens" width={200} height={300}></Image>
         );
-      case 'Nothing':
+      case "Nothing":
         return <></>;
       default:
         return null;
