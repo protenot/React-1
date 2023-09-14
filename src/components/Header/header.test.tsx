@@ -27,5 +27,4 @@ describe('Header', () => {
     const header6 = screen.getByRole('heading', { name: /this is header h6/i });
     expect(header6).toBeInTheDocument();
   });
-
 });

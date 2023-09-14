@@ -6,22 +6,22 @@ import userEvent from '@testing-library/user-event';
 
 describe('UnfoldingBlock', () => {
   it('renders UnfoldingBlock component', async () => {
- //   const onSelectChangeMock = jest.fn();
+    //   const onSelectChangeMock = jest.fn();
     render(<UnfoldingBlock />);
     screen.debug();
     screen.logTestingPlaygroundURL();
- 
+
     const button = screen.getByRole('button', { name: /more/i });
     expect(button).toBeInTheDocument();
-   
+
     //expect(screen.getByText(/New's Title/i)).toHaveStyle('display: none')
-   
+
     const block = screen.getByText(/Travelling door/i);
     expect(block).toHaveClass('hidden');
     fireEvent.click(button);
     expect(block).toBeVisible();
-    
-   /* expect;
+
+    /* expect;
     const handleBlockOpenMock = jest.fn();
     await userEvent.click(button, 'More' )
     expect(handleBlockOpenMock).toBeCalledWith('More');
