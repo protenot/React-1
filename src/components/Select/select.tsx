@@ -1,5 +1,5 @@
 import React from "react";
-export type SelectChangeHandler = (selectedValue: string) => void;
+type SelectChangeHandler = (selectedValue: string) => void;
 
 export const Select = ({
   onSelectChange,
