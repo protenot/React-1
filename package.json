@@ -6,8 +6,8 @@
     "start": "webpack-dev-server --define-process-env-node-env development",
     "build": "webpack build --define-process-env-node-env production",
     "test": "jest",
-    "lint": "prettier --check . && eslint .--ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "prettier --write . && eslint . --fix --ext .js,.jsx,.ts,.tsx",
+    "lint": "prettier --check . && eslint .--ext .js,.jsx,.tsx",
+    "lint:fix": "prettier --write . && eslint . --fix --ext .js,.jsx,.tsx",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

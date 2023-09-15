@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect } from "react";
 
 export interface HeaderProps {
   value: number;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const UnfoldingBlock: React.FC = () => {
   const [isOpen, setOpen] = React.useState(false);
@@ -9,7 +9,7 @@ export const UnfoldingBlock: React.FC = () => {
     setOpen((prevIsOpen) => !prevIsOpen);
   };
 
-  const blockClassName = `block-text ${isOpen ? '' : 'hidden'}`;
+  const blockClassName = `block-text ${isOpen ? "" : "hidden"}`;
   return (
     <>
       <h2 className="block-title">New's Title</h2>
@@ -22,7 +22,7 @@ export const UnfoldingBlock: React.FC = () => {
         scale. Placing might attempt mile.
       </p>
       <button onClick={handleBlockOpen} className="more" type="button">
-        {isOpen ? 'Close' : 'More'}
+        {isOpen ? "Close" : "More"}
       </button>
     </>
   );

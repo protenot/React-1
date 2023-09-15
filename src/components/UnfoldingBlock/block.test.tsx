@@ -1,23 +1,23 @@
-import { UnfoldingBlock } from './block';
-import '@testing-library/jest-dom';
-import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { UnfoldingBlock } from "./block";
+import "@testing-library/jest-dom";
+import React from "react";
+import { fireEvent, render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
-describe('UnfoldingBlock', () => {
-  it('renders UnfoldingBlock component', async () => {
+describe("UnfoldingBlock", () => {
+  it("renders UnfoldingBlock component", async () => {
     //   const onSelectChangeMock = jest.fn();
     render(<UnfoldingBlock />);
     screen.debug();
     screen.logTestingPlaygroundURL();
 
-    const button = screen.getByRole('button', { name: /more/i });
+    const button = screen.getByRole("button", { name: /more/i });
     expect(button).toBeInTheDocument();
 
     //expect(screen.getByText(/New's Title/i)).toHaveStyle('display: none')
 
     const block = screen.getByText(/Travelling door/i);
-    expect(block).toHaveClass('hidden');
+    expect(block).toHaveClass("hidden");
     fireEvent.click(button);
     expect(block).toBeVisible();
 

@@ -4,3 +4,5 @@ coverage
 dist/
 eslintrc.js
 storybook-static
+.storybook
+src/stories

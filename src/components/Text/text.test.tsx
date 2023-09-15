@@ -1,11 +1,11 @@
-import { Text } from './text';
-import '@testing-library/jest-dom';
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { Text } from "./text";
+import "@testing-library/jest-dom";
+import React from "react";
+import { render, screen } from "@testing-library/react";
 
-describe('Text', () => {
-  it('renders Text component', async () => {
-    render(<Text font={'normal'} />);
+describe("Text", () => {
+  it("renders Text component", async () => {
+    render(<Text font={"normal"} />);
     screen.debug();
     screen.logTestingPlaygroundURL();
     const text1 = screen.getByText(
