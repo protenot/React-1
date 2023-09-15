@@ -1,11 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from "react";
 import { Select } from './select';
+import { HeaderWithInput } from '../Header/header1.stories';
 import { SelectChangeHandler } from './select';
 import { Header } from '../Header/header';
 import { Break } from '../Break/break';
 import { Image } from '../Image/image';
-import { Input } from '../Input/input';
+import { TextWithSelect } from '../Text/text1.stories';
+import { UnfoldingBlock } from '../UnfoldingBlock/block.stories';
 const Img = require ('../../img/Kittens.jpg');
 /* const meta = {
   title: 'Component/Select',
@@ -42,7 +44,7 @@ export default {
   
   //const Template: Story = () => {
   export const ComponentSelector =()=>{  
-  const [selectedComponent, setSelectedComponent] = useState("Header");
+  const [selectedComponent, setSelectedComponent] = useState("");
   
     const onSelectChange = (selectedValue: React.SetStateAction<string>) => {
       setSelectedComponent(selectedValue);
@@ -51,10 +53,11 @@ export default {
     return (
       <>
         <Select onSelectChange={onSelectChange} />
-        {selectedComponent === "Header" && <Header value={1}  />}
+        {selectedComponent === "Header" && <HeaderWithInput value={0}  />}
         {selectedComponent === "Break" && <Break/>}
         {selectedComponent === "Image" && <Image src={Img} alt={''} width={200} height={300} />}
-        {/* Добавьте другие компоненты здесь */}
+        {selectedComponent === "Text" && <TextWithSelect/>}
+        {selectedComponent === "UnfoldingBlock" && <UnfoldingBlock/>}
       </>
     );
   };

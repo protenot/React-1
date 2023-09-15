@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-type OnInputChange = (inputValue: string) => void;
+export type OnInputChange = (inputValue: string) => void;
 
 export const Input = ({ onInputChange }: { onInputChange: OnInputChange }) => {
   // Фиксируем state
