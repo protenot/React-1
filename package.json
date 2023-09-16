@@ -10,7 +10,7 @@
     "lint:fix": "prettier --write . && eslint . --fix --ext .js,.jsx,.tsx",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build -o docs-build"
   },
   "keywords": [],
   "author": "",
