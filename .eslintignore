@@ -2,5 +2,7 @@
 node_modules
 coverage
 dist/
+eslintrc.js
 storybook-static
-.loki
+.storybook
+src/stories

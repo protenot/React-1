@@ -3,4 +3,5 @@ node_modules
 coverage
 dist/
 storybook-static
-.loki
+.storybook
+src/stories
