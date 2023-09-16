@@ -13,10 +13,7 @@ export const Input = ({ onInputChange }: { onInputChange: OnInputChange }) => {
     // Callback
     onInputChange(newValue);
   };
-  /*  const handleInputClick = (event: any) => {
-    const newValue = event.target.value;
-    setInputValue(newValue);
-  }; */
+ 
   return (
     <input
       type="text"

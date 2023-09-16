@@ -1,6 +1,5 @@
 import { Image } from "./image";
 import "@testing-library/jest-dom";
-import { Kittens } from "../../App";
 import React from "react";
 import { render, screen } from "@testing-library/react";
 describe("Image", () => {

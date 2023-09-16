@@ -1,7 +1,7 @@
 import React from "react";
 export const Break = () => {
   const hrStyle = {
-    borderColor: "black", // Здесь устанавливаем цвет черным
+    borderColor: "black", 
   };
   return <hr className="break" style={hrStyle}/>;
 };

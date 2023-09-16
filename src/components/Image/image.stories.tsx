@@ -1,7 +1,4 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-//import Img from './Kittens.jpg';
-import { Kittens } from '../../App';
 const Img = require ('../../img/Kittens.jpg');
 import type { Meta, StoryObj } from '@storybook/react';
 import {Image, ImageProps} from './image'

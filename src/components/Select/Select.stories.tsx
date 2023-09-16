@@ -10,17 +10,7 @@ import { TextWithSelect } from '../Text/text1.stories';
 import { UnfoldingBlock } from '../UnfoldingBlock/block.stories';
 const Img = require ('../../img/Kittens.jpg');
 
- /* const options = [
-    { value: "", text: "--Choose an option--" },
-    { value: "Header", text: "Header" },
-    { value: "Text", text: "Text" },
-    { value: "Break", text: "Break" },
-    { value: "UnfoldingBlock", text: "UnfoldingBlock" },
-    { value: "Image", text: "Image" },
-    { value: "Nothing", text: "Nothing" },
-  ];  */
-
-//type Story = StoryObj<typeof Select>;
+ 
 export default {
     title: "Component/Select",
     component: Select,
@@ -35,12 +25,12 @@ export default {
       
         const onSelectChange = (selectedValue: string) => {
           if (selectedValue === "Nothing") {
-            // Если выбрано "Nothing", очистить все выбранные компоненты
+        
             setSelectedComponents([]);
           } else 
-          //if (!selectedComponents.includes(selectedValue))
+        
            {
-            // Если компонент еще не выбран, добавить его в список
+           
             setSelectedComponents([...selectedComponents, selectedValue]);
           }
         };
@@ -80,17 +70,5 @@ export default {
         );
 
       
-      /*   return (
-          <>
-            <Select onSelectChange={onSelectChange} />
-            {selectedComponents.includes("Header") && <HeaderWithInput value={0} />}
-            {selectedComponents.includes("Break") && <Break />}
-           
-            {selectedComponents.includes("Text") && <TextWithSelect />}
-            {selectedComponents.includes("UnfoldingBlock") && <UnfoldingBlock />}
-            {selectedComponents.includes("Image") && (
-              <Image src={Img} alt={""} width={200} height={300} />
-            )}
-          </>
-        ); */
+      
       };
