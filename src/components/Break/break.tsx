@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 export const Break = () => {
   const hrStyle = {
-    borderColor: "black", 
+    borderColor: 'black',
   };
-  return <hr className="break" style={hrStyle}/>;
+  return <hr className="break" style={hrStyle} />;
 };

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Input } from "./input";
+import { Input } from './input';
 
 const meta = {
   title: 'Component/Input',
@@ -18,9 +18,8 @@ type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
   args: {
-    onInputChange(){}
-    },
-  
+    onInputChange() {},
+  },
 };
 
 export const LoggedOut: Story = {};

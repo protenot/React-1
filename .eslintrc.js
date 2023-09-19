@@ -2,14 +2,13 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    //'jest/globals': true,
     node: true,
   },
-  settings: {
+  /*  settings: {
     react: {
       version: '999.999.999',
     },
-  },
+  }, */
   extends: [
     'prettier',
     'eslint:recommended',
@@ -29,8 +28,7 @@ module.exports = {
   plugins: ['jest', 'react', '@typescript-eslint', 'import', 'prettier'],
   root: true,
   rules: {
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+   
     'react/no-unescaped-entities': 'off',
     'prefer-arrow-callback': 'off',
     'arrow-body-style': 'off',

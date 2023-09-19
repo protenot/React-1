@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 export type OnInputChange = (inputValue: string) => void;
 
 export const Input = ({ onInputChange }: { onInputChange: OnInputChange }) => {
   // Фиксируем state
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   //Обработчик ввода
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     //Присваиваем состояние
@@ -13,7 +13,7 @@ export const Input = ({ onInputChange }: { onInputChange: OnInputChange }) => {
     // Callback
     onInputChange(newValue);
   };
- 
+
   return (
     <input
       type="text"
