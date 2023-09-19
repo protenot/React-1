@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Header } from './header';
-
+import { jsxDecorator } from 'storybook-addon-jsx';
 const meta = {
   title: 'Component/Header',
+  decorators: [jsxDecorator],
   component: Header,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],

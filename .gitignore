@@ -1,7 +1,9 @@
 .vscode/launch.json
+.vscode
 node_modules
 coverage
 dist/
 storybook-static
 .loki
 .eslintcache
+6

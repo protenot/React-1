@@ -4,6 +4,7 @@ import { Select } from './select';
 import { HeaderWithInput } from '../Header/headerWithInput.stories';
 //import { SelectChangeHandler } from './select';
 import React from 'react';
+import { jsxDecorator } from 'storybook-addon-jsx';
 import { Break } from '../Break/break';
 import { Image } from '../Image/image';
 import { TextWithSelect } from '../Text/textWithSelect.stories';
@@ -12,6 +13,7 @@ import Img from '../../img/Kittens.jpg';
 
 export default {
   title: 'Component/Select',
+  decorators: [jsxDecorator],
   component: Select,
   argTypes: {
     onSelectChange: { action: 'selected' },

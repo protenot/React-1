@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './header';
-
+import { jsxDecorator } from 'storybook-addon-jsx';
 import { Input } from '../Input/input';
 import { HeaderProps } from './header';
 import { OnInputChange } from '../Input/input';
@@ -8,6 +8,7 @@ import { OnInputChange } from '../Input/input';
 // Определяем структуру истории
 export default {
   title: 'Components/HeaderWithInput',
+  decorators: [jsxDecorator],
   component: Header,
 };
 

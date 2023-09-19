@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { SelectTypeText } from './selectText';
+import { jsxDecorator } from 'storybook-addon-jsx';
 import { FontStyle } from '../Text/text';
 //import { Select } from '../Select/select';
 const meta = {
   title: 'Component/SelectTypeText',
+  decorators: [jsxDecorator],
   component: SelectTypeText,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
