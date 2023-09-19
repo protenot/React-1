@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
+import React from 'react';
 import { Input } from './input';
 
 const meta = {
@@ -23,3 +23,10 @@ export const LoggedIn: Story = {
 };
 
 export const LoggedOut: Story = {};
+export const Default = () => {
+  <Input
+    onInputChange={function (inputValue: string): void {
+      console.log(inputValue);
+    }}
+  />;
+};

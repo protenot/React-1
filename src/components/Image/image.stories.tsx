@@ -1,4 +1,6 @@
-const Img = require('../../img/Kittens.jpg');
+import Img from '../../img/Kittens.jpg';
+
+//const Img = require('../../img/Kittens.jpg');
 import type { Meta, StoryObj } from '@storybook/react';
 import { Image, ImageProps } from './image';
 

@@ -3,12 +3,12 @@ import { useState } from 'react';
 import { Select } from './select';
 import { HeaderWithInput } from '../Header/headerWithInput.stories';
 //import { SelectChangeHandler } from './select';
-
+import React from 'react';
 import { Break } from '../Break/break';
 import { Image } from '../Image/image';
-import { TextWithSelect } from '../Text/text1.stories';
+import { TextWithSelect } from '../Text/textWithSelect.stories';
 import { UnfoldingBlock } from '../UnfoldingBlock/block.stories';
-const Img = require('../../img/Kittens.jpg');
+import Img from '../../img/Kittens.jpg';
 
 export default {
   title: 'Component/Select',

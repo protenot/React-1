@@ -9,7 +9,8 @@ import { Break } from './components/Break/break';
 
 import { useState } from 'react';
 import { UnfoldingBlock } from './components/UnfoldingBlock/block';
-export const Kittens = require('./img/Kittens.jpg');
+import Img from './img/Kittens.jpg';
+
 /* export interface AppProps {
     Header: React.ComponentType;
   } */
@@ -70,9 +71,7 @@ export const App = () => {
       case 'UnfoldingBlock':
         return <UnfoldingBlock></UnfoldingBlock>;
       case 'Image':
-        return (
-          <Image src={Kittens} alt="Kittens" width={200} height={300}></Image>
-        );
+        return <Image src={Img} alt="Kittens" width={200} height={300}></Image>;
       case 'Nothing':
         return <></>;
       default:

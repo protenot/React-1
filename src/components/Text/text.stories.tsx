@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
+import React from 'react';
 import { Text } from './text';
 //import {}
 
@@ -22,5 +22,7 @@ export const LoggedIn: Story = {
     font: 'italic',
   },
 };
-
+export const Default = () => {
+  <Text font={'normal'} />;
+};
 //export const LoggedOut: Story = {};

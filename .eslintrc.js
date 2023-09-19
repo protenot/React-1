@@ -28,7 +28,6 @@ module.exports = {
   plugins: ['jest', 'react', '@typescript-eslint', 'import', 'prettier'],
   root: true,
   rules: {
-   
     'react/no-unescaped-entities': 'off',
     'prefer-arrow-callback': 'off',
     'arrow-body-style': 'off',
@@ -37,7 +36,7 @@ module.exports = {
     'react/display-name': 'off',
     'react/prop-types': 0,
     'no-undef': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
+    //'@typescript-eslint/no-var-requires': 'off',
     'import/prefer-default-export': 'off',
     'import/no-unresolved': 'off',
     'import/extensions': ['warn', 'never'],

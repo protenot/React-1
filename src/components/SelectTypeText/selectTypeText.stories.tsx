@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
+import React from 'react';
 import { SelectTypeText } from './selectText';
+import { FontStyle } from '../Text/text';
+//import { Select } from '../Select/select';
 const meta = {
   title: 'Component/SelectTypeText',
   component: SelectTypeText,
@@ -24,3 +26,10 @@ export const LoggedIn: Story = {
 };
 
 export const LoggedOut: Story = {};
+export const Default = () => (
+  <SelectTypeText onSelectTypeChange={handleSelectType} />
+);
+function handleSelectType(selectedType: FontStyle): void {
+  selectedType = 'normal';
+  console.log(`Selected value: ${selectedType}`);
+}

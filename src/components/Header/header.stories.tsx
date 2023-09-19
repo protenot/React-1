@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
+import React from 'react';
 import { Header } from './header';
 
 const meta = {
@@ -23,3 +23,6 @@ export const LoggedIn: Story = {
 };
 
 //export const LoggedOut: Story = {value:6};
+export const Default = () => {
+  <Header value={1} />;
+};
