@@ -32,7 +32,6 @@
     "@storybook/blocks": "^7.4.1",
     "@storybook/react": "^7.4.0",
     "@storybook/react-webpack5": "^7.4.1",
-    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
