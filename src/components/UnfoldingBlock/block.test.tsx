@@ -7,7 +7,7 @@ describe('UnfoldingBlock', () => {
   it('renders UnfoldingBlock component', async () => {
     //   const onSelectChangeMock = jest.fn();
     render(<UnfoldingBlock />);
-    screen.debug();
+
     screen.logTestingPlaygroundURL();
 
     const button = screen.getByRole('button', { name: /more/i });

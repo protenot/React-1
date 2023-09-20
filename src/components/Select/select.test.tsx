@@ -8,7 +8,7 @@ describe('Select', () => {
   it('renders Select component', async () => {
     const onSelectChangeMock = jest.fn();
     render(<Select onSelectChange={onSelectChangeMock} />);
-    screen.debug();
+
     screen.logTestingPlaygroundURL();
 
     const select = screen.getByRole('combobox', {

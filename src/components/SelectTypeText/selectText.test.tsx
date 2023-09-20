@@ -9,7 +9,7 @@ describe('SelectTypeText', () => {
     const onSelectChangeMock = jest.fn();
 
     render(<SelectTypeText onSelectTypeChange={onSelectChangeMock} />);
-    screen.debug();
+
     screen.logTestingPlaygroundURL();
 
     const select1 = screen.getByRole('combobox');
