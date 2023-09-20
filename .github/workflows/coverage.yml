@@ -1,8 +1,7 @@
 name: "coverage"
-on:
-  pull_request:
-    branches:
-      - step-2
+on: [push, pull_request]
+  
+    
 jobs:
   coverage:
     runs-on: ubuntu-latest
