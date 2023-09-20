@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-export const Break:FC = () => {
+export const Break: FC = () => {
   const hrStyle = {
     borderColor: 'black',
   };

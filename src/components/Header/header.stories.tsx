@@ -23,7 +23,11 @@ export const LoggedIn: Story = {
   },
 };
 
-//export const LoggedOut: Story = {value:6};
-export const Default = () => {
-  <Header value={1} />;
+export const LoggedOut: Story = {
+  args: {
+    value: 6,
+  },
 };
+export const Default: React.FC<HTMLHeadingElement> = () => (
+  <Header value={3}></Header>
+);

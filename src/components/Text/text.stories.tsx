@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Text } from './text';
-
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const meta = {
   title: 'Component/Text',
+  decorators: [jsxDecorator],
   component: Text,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
@@ -22,7 +23,4 @@ export const LoggedIn: Story = {
     font: 'italic',
   },
 };
-export const Default = () => {
-  <Text font={'normal'} />;
-};
-
+export const Default: React.FC<HTMLElement> = () => <Text font={'normal'} />;

@@ -5,13 +5,12 @@ type OnSelectTypeChange = (selectedType: FontStyle) => void;
 type SelectTypeProps = {
   onSelectTypeChange: OnSelectTypeChange;
 };
-export const SelectTypeText:React.FC<SelectTypeProps> = ({
+export const SelectTypeText: React.FC<SelectTypeProps> = ({
   onSelectTypeChange,
 }: {
   onSelectTypeChange: OnSelectTypeChange;
 }) => {
   const optionsType = [
-   
     { value: 'normal', text: 'normal' },
     { value: 'italic', text: 'italic' },
     { value: 'oblique', text: 'oblique' },

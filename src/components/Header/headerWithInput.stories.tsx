@@ -4,7 +4,7 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 import { Input } from '../Input/input';
 import { HeaderProps } from './header';
 import { OnInputChange } from '../Input/input';
-
+ 
 // Определяем структуру истории
 export default {
   title: 'Components/HeaderWithInput',
@@ -20,7 +20,6 @@ export const HeaderWithInput: React.FC<HeaderProps> = ({ value }) => {
   useEffect(() => {
     setHeaderState(headerState);
   }, [headerState]);
-  
 
   const handleInputChange: OnInputChange = (inputValue = value.toString()) => {
     // Обрабатываем изменение значения в поле ввода
@@ -34,6 +33,5 @@ export const HeaderWithInput: React.FC<HeaderProps> = ({ value }) => {
         <Header value={parseInt(inputValue)}></Header>
       </>
     );
-    // HeaderElement;
   }
 };

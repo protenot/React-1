@@ -1,12 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Input } from './input';
+import { jsxDecorator } from 'storybook-addon-jsx';
 
 const meta = {
   title: 'Component/Input',
   component: Input,
+  decorators: [jsxDecorator],
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-  //tags: ['autodocs'],
+  tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'center',
@@ -23,10 +25,10 @@ export const LoggedIn: Story = {
 };
 
 export const LoggedOut: Story = {};
-export const Default = () => {
+export const Default: React.FC<HTMLInputElement> = () => (
   <Input
     onInputChange={function (inputValue: string): void {
-      console.log(inputValue);
+      console.log(`Input value: ${inputValue}`);
     }}
-  />;
-};
+  />
+);

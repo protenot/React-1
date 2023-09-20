@@ -92,7 +92,7 @@ const config = {
   // moduleNameMapper: {},
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  // modulePathIgnorePatterns: [],
+  modulePathIgnorePatterns: ['<rootDir>/src/img'],
 
   // Activates notifications for test results
   // notify: false,
@@ -161,8 +161,9 @@ const config = {
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
-  //   "\\\\node_modules\\\\"
-  // ],
+  //  "\\\\node_modules\\\\",
+  //  "src/img/Kittens.jpg"
+  //],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],

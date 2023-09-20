@@ -31,8 +31,8 @@ export const Header: React.FC<HeaderProps> = ({ value }) => {
     case 6:
       return <h6>This is header h6</h6>;
 
-    /* default:
-      HeaderElement = null; */
+    default:
+      return;
   }
 
   return;

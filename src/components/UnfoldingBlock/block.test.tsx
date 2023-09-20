@@ -19,20 +19,5 @@ describe('UnfoldingBlock', () => {
     expect(block).not.toBeVisible;
     fireEvent.click(button);
     expect(block).toBeVisible();
-
-    /* expect;
-    const handleBlockOpenMock = jest.fn();
-    await userEvent.click(button, 'More' )
-    expect(handleBlockOpenMock).toBeCalledWith('More');
-    const break1 = screen.getByRole('option', { name: /break/i });
-
-    expect(break1).toBeInTheDocument();
-
-    const image1 = screen.getByRole('option', { name: /image/i });
-
-    expect(image1).toBeInTheDocument();
-
-    await userEvent.selectOptions(select1, 'Break');
-    expect(onSelectChangeMock).toHaveBeenCalledWith('Break'); */
   });
 });

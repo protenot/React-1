@@ -26,12 +26,19 @@ export const LoggedIn: Story = {
     },
   },
 };
-   
-export const LoggedOut: Story = {};
-export const Default = () => (
+
+export const LoggedOut: Story = {
+  args: {
+    onSelectTypeChange: (selectedType: string) => {
+      console.log(`Selected value: ${selectedType}`);
+    },
+  },
+};
+export const Default: React.FC<HTMLSelectElement> = () => (
   <SelectTypeText onSelectTypeChange={handleSelectType} />
 );
 function handleSelectType(selectedType: FontStyle): void {
   selectedType = 'normal';
   console.log(`Selected value: ${selectedType}`);
 }
+ 

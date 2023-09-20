@@ -47,7 +47,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ blockType }) => {
       return <Image src={Img} alt="Kittens" width={200} height={300} />;
     case 'Nothing':
       return null;
-    /*  default:
-        return null; */
+    default:
+      return null;
   }
 };

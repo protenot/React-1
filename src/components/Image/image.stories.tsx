@@ -1,6 +1,6 @@
 import Img from '../../img/Kittens.jpg';
 //import React from 'react';
-//const Img = require('../../img/Kittens.jpg');
+
 import type { Meta, StoryObj } from '@storybook/react';
 import { Image, ImageProps } from './image';
 
@@ -14,11 +14,9 @@ const meta = {
     layout: 'centered',
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-  //tags: ['autodocs'],
+  tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    //p: { control: 'black' },
-  },
+  argTypes: {},
 } satisfies Meta<ImageProps>;
 
 export default meta;
