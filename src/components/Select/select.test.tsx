@@ -11,20 +11,20 @@ describe('Select', () => {
     screen.debug();
     screen.logTestingPlaygroundURL();
 
-    const select1 = screen.getByRole('combobox', {
+    const select = screen.getByRole('combobox', {
       name: /select what do you want to see/i,
     });
-    expect(select1).toBeInTheDocument();
+    expect(select).toBeInTheDocument();
     expect;
     const break1 = screen.getByRole('option', { name: /break/i });
 
     expect(break1).toBeInTheDocument();
 
-    const image1 = screen.getByRole('option', { name: /image/i });
+    const image = screen.getByRole('option', { name: /image/i });
 
-    expect(image1).toBeInTheDocument();
+    expect(image).toBeInTheDocument();
 
-    await userEvent.selectOptions(select1, 'Break');
+    await userEvent.selectOptions(select, 'Break');
     expect(onSelectChangeMock).toHaveBeenCalledWith('Break');
   });
 });

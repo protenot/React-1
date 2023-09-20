@@ -2,14 +2,16 @@ import { FontStyle } from '../Text/text';
 import React, { useState, ChangeEvent } from 'react';
 
 type OnSelectTypeChange = (selectedType: FontStyle) => void;
-
-export const SelectTypeText = ({
+type SelectTypeProps = {
+  onSelectTypeChange: OnSelectTypeChange;
+};
+export const SelectTypeText:React.FC<SelectTypeProps> = ({
   onSelectTypeChange,
 }: {
   onSelectTypeChange: OnSelectTypeChange;
 }) => {
   const optionsType = [
-    // { value: '', text: '' },
+   
     { value: 'normal', text: 'normal' },
     { value: 'italic', text: 'italic' },
     { value: 'oblique', text: 'oblique' },
@@ -30,8 +32,8 @@ export const SelectTypeText = ({
       value={selectedType}
       onChange={handleSelectType}
     >
-      {optionsType.map((option) => (
-        <option key={option.value} value={option.value}>
+      {optionsType.map((option, index) => (
+        <option key={index} value={option.value}>
           {option.text}
         </option>
       ))}

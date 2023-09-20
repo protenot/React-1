@@ -12,30 +12,28 @@ export const Header: React.FC<HeaderProps> = ({ value }) => {
     setHeaderState(value);
   }, [value]);
 
-  let HeaderElement = null;
-
   switch (headerState) {
     case null || 1:
-      HeaderElement = <h1>This is header h1</h1>;
-      break;
+      return <h1>This is header h1</h1>;
+
     case 2:
-      HeaderElement = <h2>This is header h2</h2>;
-      break;
+      return <h2>This is header h2</h2>;
+
     case 3:
-      HeaderElement = <h3 className="h3-title">This is header h3</h3>;
-      break;
+      return <h3 className="h3-title">This is header h3</h3>;
+
     case 4:
-      HeaderElement = <h4>This is header h4</h4>;
-      break;
+      return <h4>This is header h4</h4>;
+
     case 5:
-      HeaderElement = <h5>This is header h5</h5>;
-      break;
+      return <h5>This is header h5</h5>;
+
     case 6:
-      HeaderElement = <h6>This is header h6</h6>;
-      break;
+      return <h6>This is header h6</h6>;
+
     /* default:
       HeaderElement = null; */
   }
 
-  return HeaderElement;
+  return;
 };

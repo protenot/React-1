@@ -16,7 +16,7 @@ describe('UnfoldingBlock', () => {
     //expect(screen.getByText(/New's Title/i)).toHaveStyle('display: none')
 
     const block = screen.getByText(/Travelling door/i);
-    expect(block).toHaveClass('hidden');
+    expect(block).not.toBeVisible;
     fireEvent.click(button);
     expect(block).toBeVisible();
 

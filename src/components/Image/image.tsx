@@ -10,4 +10,3 @@ export interface ImageProps {
 export const Image: React.FC<ImageProps> = ({ src, alt, width, height }) => {
   return <img src={src} alt={alt} width={width} height={height}></img>;
 };
-//'/src/img/Kittens.jpg'} alt = 'Kittens

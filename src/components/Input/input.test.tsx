@@ -10,9 +10,9 @@ describe('Input', () => {
     render(<Input onInputChange={onInputChangeMock} />);
     screen.debug();
     screen.logTestingPlaygroundURL();
-    const inputElement = screen.getByPlaceholderText(
+    const inputElement = screen.getByPlaceholderText<HTMLInputElement>(
       'Enter digit from 1 to 6',
-    ) as HTMLInputElement;
+    );
 
     await userEvent.type(inputElement, '2');
 

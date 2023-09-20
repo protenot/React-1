@@ -20,6 +20,7 @@ export const HeaderWithInput: React.FC<HeaderProps> = ({ value }) => {
   useEffect(() => {
     setHeaderState(headerState);
   }, [headerState]);
+  
 
   const handleInputChange: OnInputChange = (inputValue = value.toString()) => {
     // Обрабатываем изменение значения в поле ввода
@@ -29,7 +30,6 @@ export const HeaderWithInput: React.FC<HeaderProps> = ({ value }) => {
   if (!value) {
     return (
       <>
-        {' '}
         <Input onInputChange={handleInputChange} />
         <Header value={parseInt(inputValue)}></Header>
       </>

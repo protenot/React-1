@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { Text } from './text';
-//import {}
+
 
 const meta = {
   title: 'Component/Text',
@@ -25,4 +25,4 @@ export const LoggedIn: Story = {
 export const Default = () => {
   <Text font={'normal'} />;
 };
-//export const LoggedOut: Story = {};
+
