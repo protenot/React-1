@@ -41,4 +41,3 @@ function handleSelectType(selectedType: FontStyle): void {
   selectedType = 'normal';
   console.log(`Selected value: ${selectedType}`);
 }
- 
