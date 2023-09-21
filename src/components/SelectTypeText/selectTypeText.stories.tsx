@@ -2,8 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { SelectTypeText } from './selectText';
 import { jsxDecorator } from 'storybook-addon-jsx';
-import { FontStyle } from '../Text/text';
-//import { Select } from '../Select/select';
+
 const meta = {
   title: 'Component/SelectTypeText',
   decorators: [jsxDecorator],
@@ -23,7 +22,7 @@ export const LoggedIn: Story = {
   args: {
     onSelectTypeChange: (selectedType: string) => {
       console.log(`Selected value: ${selectedType}`);
-    },
+    }, 
   },
 };
 
@@ -37,7 +36,7 @@ export const LoggedOut: Story = {
 export const Default: React.FC<HTMLSelectElement> = () => (
   <SelectTypeText onSelectTypeChange={handleSelectType} />
 );
-function handleSelectType(selectedType: FontStyle): void {
+function handleSelectType(selectedType: string): void {
   selectedType = 'normal';
   console.log(`Selected value: ${selectedType}`);
 }

@@ -7,6 +7,4 @@ export interface ImageProps {
   height: number;
 }
 
-export const Image: React.FC<ImageProps> = ({ src, alt, width, height }) => {
-  return <img src={src} alt={alt} width={width} height={height}></img>;
-};
+export const Image: React.FC<ImageProps> = ({ ...props }) => <img {...props} />;

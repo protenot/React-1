@@ -4,11 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  /*  settings: {
-    react: {
-      version: '999.999.999',
-    },
-  }, */
+
   extends: [
     'prettier',
     'eslint:recommended',

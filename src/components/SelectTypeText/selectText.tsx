@@ -1,26 +1,26 @@
-import { FontStyle } from '../Text/text';
 import React, { useState, ChangeEvent } from 'react';
 
-type OnSelectTypeChange = (selectedType: FontStyle) => void;
+type OnSelectTypeChange = (selectedType: string) => void;
 type SelectTypeProps = {
   onSelectTypeChange: OnSelectTypeChange;
 };
+
+const optionsType = [
+  { value: 'normal', text: 'normal' },
+  { value: 'italic', text: 'italic' },
+  { value: 'oblique', text: 'oblique' },
+];
 export const SelectTypeText: React.FC<SelectTypeProps> = ({
   onSelectTypeChange,
 }: {
   onSelectTypeChange: OnSelectTypeChange;
 }) => {
-  const optionsType = [
-    { value: 'normal', text: 'normal' },
-    { value: 'italic', text: 'italic' },
-    { value: 'oblique', text: 'oblique' },
-  ];
   // Фиксируем state
-  const [selectedType, setSelectedType] = useState('optionsType[0].value');
+  const [selectedType, setSelectedType] = useState('normal');
   //Обработчик select
   const handleSelectType = (event: ChangeEvent<HTMLSelectElement>) => {
     //Присваиваем состояние
-    const newTypeValue: FontStyle = event.target.value as FontStyle;
+    const newTypeValue = event.target.value;
     // Фиксируем новый стейт
     setSelectedType(newTypeValue);
     onSelectTypeChange(newTypeValue);

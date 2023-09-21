@@ -12,10 +12,10 @@ describe('SelectTypeText', () => {
 
     screen.logTestingPlaygroundURL();
 
-    const select1 = screen.getByRole('combobox');
-    expect(select1).toBeInTheDocument();
+    const mySelect = screen.getByRole('combobox');
+    expect(mySelect).toBeInTheDocument();
 
-    await userEvent.selectOptions(select1, 'italic');
+    await userEvent.selectOptions(mySelect, 'italic');
     expect(onSelectChangeMock).toHaveBeenCalledWith('italic');
   });
 });

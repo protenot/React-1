@@ -15,10 +15,10 @@ describe('Select', () => {
       name: /select what do you want to see/i,
     });
     expect(select).toBeInTheDocument();
-    expect;
-    const break1 = screen.getByRole('option', { name: /break/i });
 
-    expect(break1).toBeInTheDocument();
+    const myBreak = screen.getByRole('option', { name: /break/i });
+
+    expect(myBreak).toBeInTheDocument();
 
     const image = screen.getByRole('option', { name: /image/i });
 

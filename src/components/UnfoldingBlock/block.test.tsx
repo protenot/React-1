@@ -5,7 +5,6 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 describe('UnfoldingBlock', () => {
   it('renders UnfoldingBlock component', async () => {
-    //   const onSelectChangeMock = jest.fn();
     render(<UnfoldingBlock />);
 
     screen.logTestingPlaygroundURL();
@@ -13,10 +12,8 @@ describe('UnfoldingBlock', () => {
     const button = screen.getByRole('button', { name: /more/i });
     expect(button).toBeInTheDocument();
 
-    //expect(screen.getByText(/New's Title/i)).toHaveStyle('display: none')
-
     const block = screen.getByText(/Travelling door/i);
-    expect(block).not.toBeVisible;
+    expect(block).not.toBeVisible();
     fireEvent.click(button);
     expect(block).toBeVisible();
   });

@@ -21,6 +21,6 @@ export const Input = ({ onInputChange }: { onInputChange: OnInputChange }) => {
       placeholder="Enter digit from 1 to 6"
       onChange={handleInputChange}
       value={inputValue}
-    ></input>
+    />
   );
 };

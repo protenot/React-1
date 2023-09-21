@@ -3,7 +3,6 @@ import { Header } from './header';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import { Input } from '../Input/input';
 import { HeaderProps } from './header';
-import { OnInputChange } from '../Input/input';
 
 // Определяем структуру истории
 export default {
@@ -18,18 +17,13 @@ export const HeaderWithInput: React.FC<HeaderProps> = ({ value }) => {
   const [inputValue, setInputValue] = useState<string>('');
   // Функция для обработки изменения типа текста
   useEffect(() => {
-    setHeaderState(headerState);
+    setHeaderState(value);
   }, [headerState]);
-
-  const handleInputChange: OnInputChange = (inputValue = value.toString()) => {
-    // Обрабатываем изменение значения в поле ввода
-    setInputValue(inputValue);
-  };
 
   if (!value) {
     return (
       <>
-        <Input onInputChange={handleInputChange} />
+        <Input onInputChange={setInputValue} />
         <Header value={parseInt(inputValue)}></Header>
       </>
     );

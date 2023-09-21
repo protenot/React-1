@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import { Input } from '../Input/input';
 import { Header } from '../Header/header';
 import { SelectTypeText } from '../SelectTypeText/selectText';
@@ -12,30 +12,22 @@ type BlockRendererProps = {
   blockType: string;
 };
 
-export const BlockRenderer: React.FC<BlockRendererProps> = ({ blockType }) => {
+export const BlockRenderer:React.FC<BlockRendererProps> = ({ blockType }) => {
   const [inputValue, setInputValue] = useState<string>('');
   const [selectedType, setSelectedType] = useState<string>('normal');
-
-  const handleInputChange = (value: string) => {
-    setInputValue(value);
-  };
-
-  const handleSelectType = (value: string) => {
-    setSelectedType(value);
-  };
 
   switch (blockType) {
     case 'Header':
       return (
         <>
-          <Input onInputChange={handleInputChange} />
+          <Input onInputChange={setInputValue} />
           <Header value={parseInt(inputValue)} />
         </>
       );
     case 'Text':
       return (
         <>
-          <SelectTypeText onSelectTypeChange={handleSelectType} />
+          <SelectTypeText onSelectTypeChange={setSelectedType} />
           <Text font={selectedType} />
         </>
       );
@@ -45,8 +37,7 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ blockType }) => {
       return <UnfoldingBlock />;
     case 'Image':
       return <Image src={Img} alt="Kittens" width={200} height={300} />;
-    case 'Nothing':
-      return null;
+   
     default:
       return null;
   }

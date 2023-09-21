@@ -12,10 +12,10 @@ describe('Text', () => {
     const searchText =
       'joy prepared poor. good believing prevent. amiable admiration meritsresources waiting sight no father hunted plenty alteration mrs welcome nor. since mutual little over betrayed returned elderly extremity girl wondered entrance herself amiable is behaved interested concluded. change morning letter uneasy horses attempt sportsman spot we my.';
 
-    const text1: HTMLElement | null = screen.getByText(searchText, {
+    const text: HTMLElement | null = screen.getByText(searchText, {
       exact: false,
     });
 
-    expect(text1).toBeInTheDocument();
+    expect(text).toBeInTheDocument();
   });
 });

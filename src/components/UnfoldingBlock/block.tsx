@@ -3,11 +3,10 @@ import React, { useCallback } from 'react';
 export const UnfoldingBlock: React.FC = () => {
   const [isOpen, setOpen] = React.useState(false);
 
-  const handleBlockOpen:
-    | React.MouseEventHandler<HTMLButtonElement>
-    | undefined = useCallback(() => {
-    setOpen((prevIsOpen) => !prevIsOpen);
-  }, []);
+  const handleBlockOpen: React.MouseEventHandler<HTMLButtonElement> =
+    useCallback(() => {
+      setOpen((prevIsOpen) => !prevIsOpen);
+    }, []);
 
   const blockStyle = {
     display: isOpen ? 'block' : 'none',
