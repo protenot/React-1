@@ -29,9 +29,7 @@ export const ComponentSelector = () => {
     <>
       <Select onSelectChange={onSelectChange} />
       {selectedComponents.map((block, index) => (
-        <div key={index}>
-          {<BlockRenderer blockType={block}/>}
-        </div>
+        <div key={index}>{<BlockRenderer blockType={block} />}</div>
       ))}
     </>
   );

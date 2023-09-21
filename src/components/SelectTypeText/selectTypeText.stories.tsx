@@ -22,7 +22,7 @@ export const LoggedIn: Story = {
   args: {
     onSelectTypeChange: (selectedType: string) => {
       console.log(`Selected value: ${selectedType}`);
-    }, 
+    },
   },
 };
 

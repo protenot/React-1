@@ -1,4 +1,4 @@
-import React, { useState, FC } from 'react';
+import React, { useState } from 'react';
 import { Input } from '../Input/input';
 import { Header } from '../Header/header';
 import { SelectTypeText } from '../SelectTypeText/selectText';
@@ -12,7 +12,7 @@ type BlockRendererProps = {
   blockType: string;
 };
 
-export const BlockRenderer:React.FC<BlockRendererProps> = ({ blockType }) => {
+export const BlockRenderer: React.FC<BlockRendererProps> = ({ blockType }) => {
   const [inputValue, setInputValue] = useState<string>('');
   const [selectedType, setSelectedType] = useState<string>('normal');
 
@@ -37,7 +37,7 @@ export const BlockRenderer:React.FC<BlockRendererProps> = ({ blockType }) => {
       return <UnfoldingBlock />;
     case 'Image':
       return <Image src={Img} alt="Kittens" width={200} height={300} />;
-   
+
     default:
       return null;
   }
