@@ -1,30 +1,24 @@
-import React, { useCallback } from 'react';
+import React from 'react';
+export interface BlockProps {
+  title: string;
+  content: string;
+}
 
-export const UnfoldingBlock: React.FC = () => {
+export const UnfoldingBlock: React.FC<BlockProps> = ({ title, content }) => {
   const [isOpen, setOpen] = React.useState(false);
 
-  const handleBlockOpen: React.MouseEventHandler<HTMLButtonElement> =
-    useCallback(() => {
-      setOpen((prevIsOpen) => !prevIsOpen);
-    }, []);
-
-  const blockStyle = {
-    display: isOpen ? 'block' : 'none',
+  const handleBlock = () => {
+    setOpen((prevIsOpen) => !prevIsOpen);
   };
+
   return (
     <>
-      <h2 className="block-title">New's Title</h2>
-      <p style={blockStyle} className="block-text">
-        Travelling door compliment connection either however principles looking
-        maids woman express excuse sweetness. Going distance dearest visited
-        contented fine sorry declared though enjoyment give him melancholy
-        innate sorry. Gone heart hundred settling newspaper greater numerous
-        two. His blushes dare innate passage play position resolving desirous
-        scale. Placing might attempt mile.
-      </p>
-      <button onClick={handleBlockOpen} className="more" type="button">
-        {isOpen ? 'Close' : 'More'}
-      </button>
+      <div className="block-text">
+        <div className="block-title" onClick={handleBlock}>
+          {title}
+        </div>
+        {isOpen && <div className="block-content">{content}</div>}
+      </div>
     </>
   );
 };

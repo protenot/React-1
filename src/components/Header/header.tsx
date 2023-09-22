@@ -1,35 +1,41 @@
 import React, { useState, useEffect } from 'react';
 
 export interface HeaderProps {
-  value: number;
+  value: string;
+  headerTitle: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ value }) => {
-  const [headerState, setHeaderState] = useState<number | null>(null);
-
+export const Header: React.FC<HeaderProps> = ({ value, headerTitle }) => {
+  const [selectedType, setSelectedType] = useState<string>('');
+  const [headerTitleState, setHeaderTitleState] = useState(' ');
   // Используем useEffect для обновления headerState при изменении value
   useEffect(() => {
-    setHeaderState(value);
-  }, [value]);
+    setSelectedType(value);
+    setHeaderTitleState(headerTitle);
+  }, [selectedType, headerTitleState]);
 
-  switch (headerState) {
-    case null || 1:
-      return <h1>This is header h1</h1>;
+  /*  useEffect(() => {
+    setHeaderTitleState(headerTitle);
+  }, [selectedType]); */
 
-    case 2:
-      return <h2>This is header h2</h2>;
+  switch (value) {
+    case 'h1':
+      return <h1>{headerTitle}</h1>;
 
-    case 3:
-      return <h3 className="h3-title">This is header h3</h3>;
+    case 'h2':
+      return <h2>{headerTitle}</h2>;
 
-    case 4:
-      return <h4>This is header h4</h4>;
+    case 'h3':
+      return <h3>{headerTitle}</h3>;
 
-    case 5:
-      return <h5>This is header h5</h5>;
+    case 'h4':
+      return <h4>{headerTitle}</h4>;
 
-    case 6:
-      return <h6>This is header h6</h6>;
+    case 'h5':
+      return <h5>{headerTitle}</h5>;
+
+    case 'h6':
+      return <h6>{headerTitle}</h6>;
 
     default:
       return null;

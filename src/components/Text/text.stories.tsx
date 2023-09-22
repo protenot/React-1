@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
+//import React from 'react';
 import { Text } from './text';
 import { jsxDecorator } from 'storybook-addon-jsx';
 
@@ -19,8 +19,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
-  /* args: {
+  args: {
     font: 'italic',
-  }, */
+    textContent: '',
+  },
 };
-export const Default: React.FC<HTMLElement> = () => <Text font={'normal'} />;
+//export const Default: React.FC<HTMLElement> = () => <Text font={'normal'} />;

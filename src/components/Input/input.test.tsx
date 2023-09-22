@@ -1,21 +1,53 @@
 import { Input } from './input';
 import '@testing-library/jest-dom';
 import React from 'react';
-import userEvent from '@testing-library/user-event';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
+const onInputChangeMock = jest.fn();
 describe('Input', () => {
-  it('calls onInputChange when input value changes', async () => {
+  it('should render with placeholder text', async () => {
     const onInputChangeMock = jest.fn();
-    render(<Input onInputChange={onInputChangeMock} />);
 
+    render(
+      <Input
+        onInputChange={onInputChangeMock}
+        placeholderText="Enter your title"
+      />,
+    );
     screen.logTestingPlaygroundURL();
-    const inputElement = screen.getByPlaceholderText<HTMLInputElement>(
-      'Enter digit from 1 to 6',
+
+    const inputElement =
+      screen.getByPlaceholderText<HTMLInputElement>('Enter your title');
+    expect(inputElement).toBeInTheDocument();
+  });
+
+  it('should update input value when changed', () => {
+    render(
+      <Input
+        onInputChange={onInputChangeMock}
+        placeholderText="Test Placeholder"
+      />,
     );
 
-    await userEvent.type(inputElement, '2');
+    const inputElement: HTMLInputElement =
+      screen.getByPlaceholderText('Test Placeholder');
+    fireEvent.change(inputElement, { target: { value: 'New Value' } });
 
-    expect(onInputChangeMock).toHaveBeenCalledWith('2');
+    expect(inputElement.value).toBe('New Value');
+  });
+
+  it('should call onInputChange when Enter key is pressed', () => {
+    const { getByPlaceholderText } = render(
+      <Input
+        onInputChange={onInputChangeMock}
+        placeholderText="Test Placeholder"
+      />,
+    );
+
+    const inputElement = getByPlaceholderText('Test Placeholder');
+    fireEvent.change(inputElement, { target: { value: 'New Value' } });
+    fireEvent.keyDown(inputElement, { key: 'Enter', code: 'Enter' });
+
+    expect(onInputChangeMock).toHaveBeenCalledWith('New Value');
   });
 });

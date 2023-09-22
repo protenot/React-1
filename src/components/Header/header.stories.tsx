@@ -19,15 +19,17 @@ type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
   args: {
-    value: 1,
+    value: 'h1',
+    headerTitle: '',
   },
 };
 
 export const LoggedOut: Story = {
   args: {
-    value: 6,
+    value: 'h1',
+    headerTitle: '',
   },
 };
 export const Default: React.FC<HTMLHeadingElement> = () => (
-  <Header value={3}></Header>
+  <Header value={'h3'} headerTitle=""></Header>
 );

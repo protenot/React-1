@@ -13,6 +13,7 @@ const options = [
   { value: 'Image', text: 'Image' },
   { value: 'Nothing', text: 'Nothing' },
 ];
+
 export const Select: React.FC<SelectProps> = ({
   onSelectChange,
 }: {

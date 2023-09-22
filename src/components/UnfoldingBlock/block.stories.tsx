@@ -1,6 +1,33 @@
-import React, { useState, useCallback } from 'react';
+//import React, { useState, useCallback } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-export const UnfoldingBlock: React.FC = () => {
+import { UnfoldingBlock } from './block';
+import { jsxDecorator } from 'storybook-addon-jsx';
+
+const meta = {
+  title: 'Component/UnfoldingBlock',
+  decorators: [jsxDecorator],
+  component: UnfoldingBlock,
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
+  tags: ['autodocs'],
+  parameters: {
+    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
+    layout: 'center',
+  },
+} satisfies Meta<typeof UnfoldingBlock>;
+type Story = StoryObj<typeof meta>;
+export default meta;
+export const LoggedIn: Story = {
+  args: {
+    title: 'Word',
+    content:
+      'Disable emitting declarations that have `@internal` in their JSDoc comments.',
+  },
+};
+
+//type Story = StoryObj<typeof meta>;
+
+/* export const UnfoldingBlock: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
 
   const handleBlockOpen = useCallback(() => {
@@ -30,4 +57,4 @@ export const UnfoldingBlock: React.FC = () => {
 export default {
   title: 'Component/UnfoldingBlock',
   component: UnfoldingBlock,
-};
+}; */

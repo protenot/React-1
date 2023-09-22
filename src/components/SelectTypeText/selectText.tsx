@@ -1,20 +1,21 @@
 import React, { useState, ChangeEvent } from 'react';
 
 type OnSelectTypeChange = (selectedType: string) => void;
-type SelectTypeProps = {
-  onSelectTypeChange: OnSelectTypeChange;
+
+export type Option = {
+  value: string;
+  text: string;
 };
 
-const optionsType = [
-  { value: 'normal', text: 'normal' },
-  { value: 'italic', text: 'italic' },
-  { value: 'oblique', text: 'oblique' },
-];
+type SelectTypeProps = {
+  onSelectTypeChange: OnSelectTypeChange;
+  options: Option[];
+};
+
 export const SelectTypeText: React.FC<SelectTypeProps> = ({
   onSelectTypeChange,
-}: {
-  onSelectTypeChange: OnSelectTypeChange;
-}) => {
+  options,
+}: SelectTypeProps) => {
   // Фиксируем state
   const [selectedType, setSelectedType] = useState('normal');
   //Обработчик select
@@ -31,7 +32,7 @@ export const SelectTypeText: React.FC<SelectTypeProps> = ({
       value={selectedType}
       onChange={handleSelectType}
     >
-      {optionsType.map((option, index) => (
+      {options.map((option, index) => (
         <option key={index} value={option.value}>
           {option.text}
         </option>

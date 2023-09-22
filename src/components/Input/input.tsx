@@ -1,25 +1,34 @@
 import React, { useState } from 'react';
+
 export type OnInputChange = (inputValue: string) => void;
 
-export const Input = ({ onInputChange }: { onInputChange: OnInputChange }) => {
-  // Фиксируем state
+export interface InputProps {
+  onInputChange: OnInputChange;
+  placeholderText: string;
+}
+
+export const Input = ({ onInputChange, placeholderText }: InputProps) => {
   const [inputValue, setInputValue] = useState('');
-  //Обработчик ввода
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //Присваиваем состояние
     const newValue = event.target.value;
-    // Фиксируем новый стейт
+
     setInputValue(newValue);
-    // Callback
+
     onInputChange(newValue);
   };
-
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      onInputChange(inputValue);
+    }
+  };
   return (
     <input
       type="text"
       className="input-value"
-      placeholder="Enter digit from 1 to 6"
+      placeholder={placeholderText}
       onChange={handleInputChange}
+      onKeyDown={handleKeyPress}
       value={inputValue}
     />
   );

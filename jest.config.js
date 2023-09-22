@@ -43,7 +43,7 @@ const config = {
   // ],
 
   // An object that configures minimum threshold enforcement for coverage results
-   coverageThreshold: {
+  coverageThreshold: {
     global: {
       branches: 80,
       functions: 80,
@@ -173,7 +173,7 @@ const config = {
   //],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
-  // testRegex: [],
+  testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js|jsx)$',
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: undefined,
@@ -185,10 +185,9 @@ const config = {
   transform: { '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest' },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   "\\\\node_modules\\\\",
-  //   "\\.pnp\\.[^\\\\]+$"
-  // ],
+  transformIgnorePatterns: [
+    '/node_modules/(?!(.*\\.jsx?|.*\\.tsx?|.*\\.ts?|.*\\.json|.*\\.jpg))',
+  ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
