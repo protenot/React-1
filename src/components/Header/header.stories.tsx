@@ -13,7 +13,7 @@ const meta = {
     layout: 'center',
   },
 } satisfies Meta<typeof Header>;
-
+ 
 export default meta;
 type Story = StoryObj<typeof meta>;
 

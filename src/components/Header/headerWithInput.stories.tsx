@@ -9,7 +9,7 @@ export default {
   title: 'Components/HeaderWithInput',
   decorators: [jsxDecorator],
   component: Header,
-};
+}; 
 
 // Создаем комбинированную историю
 export const HeaderWithInput: React.FC<HeaderProps> = ({ value }) => {

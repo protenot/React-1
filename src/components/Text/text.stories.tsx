@@ -19,8 +19,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
-  /* args: {
+  args: {
     font: 'italic',
-  }, */
+  },
 };
 export const Default: React.FC<HTMLElement> = () => <Text font={'normal'} />;

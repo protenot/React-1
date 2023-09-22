@@ -10,7 +10,7 @@ export const TextWithSelect = () => {
   const handleTypeChange = (newType: string) => {
     setSelectedType(newType);
   };
-
+ 
   return (
     <>
       <SelectTypeText onSelectTypeChange={handleTypeChange} />

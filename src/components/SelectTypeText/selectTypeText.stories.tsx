@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { SelectTypeText } from './selectText';
 import { jsxDecorator } from 'storybook-addon-jsx';
-
+ 
 const meta = {
   title: 'Component/SelectTypeText',
   decorators: [jsxDecorator],
