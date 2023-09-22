@@ -6,7 +6,7 @@ export interface InputProps {
   onInputChange: OnInputChange;
   placeholderText: string;
 }
-
+ 
 export const Input = ({ onInputChange, placeholderText }: InputProps) => {
   const [inputValue, setInputValue] = useState('');
 
