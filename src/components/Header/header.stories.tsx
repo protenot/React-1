@@ -1,35 +1,30 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { Header } from './header';
-import { jsxDecorator } from 'storybook-addon-jsx';
+
 const meta = {
   title: 'Component/Header',
-  decorators: [jsxDecorator],
+  //decorators: [jsxDecorator],
   component: Header,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'center',
   },
 } satisfies Meta<typeof Header>;
- 
+
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
   args: {
     value: 'h1',
-    headerTitle: '',
+    headerTitle: 'This is title for LoggedIn',
   },
 };
 
 export const LoggedOut: Story = {
   args: {
-    value: 'h1',
-    headerTitle: '',
+    value: 'h6',
+    headerTitle: 'This is title for Loggedout',
   },
 };
-export const Default: React.FC<HTMLHeadingElement> = () => (
-  <Header value={'h3'} headerTitle=""></Header>
-);
+

@@ -8,7 +8,7 @@ const optionsType: Option[] = [
   { value: 'italic', text: 'italic' },
   { value: 'oblique', text: 'oblique' },
 ];
- 
+
 const meta = {
   title: 'Component/SelectTypeText',
   decorators: [jsxDecorator],

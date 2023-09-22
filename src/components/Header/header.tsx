@@ -8,15 +8,11 @@ export interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ value, headerTitle }) => {
   const [selectedType, setSelectedType] = useState<string>('');
   const [headerTitleState, setHeaderTitleState] = useState(' ');
-  // Используем useEffect для обновления headerState при изменении value
+
   useEffect(() => {
     setSelectedType(value);
     setHeaderTitleState(headerTitle);
   }, [selectedType, headerTitleState]);
-
-  /*  useEffect(() => {
-    setHeaderTitleState(headerTitle);
-  }, [selectedType]); */
 
   switch (value) {
     case 'h1':

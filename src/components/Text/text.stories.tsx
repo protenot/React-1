@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-//import React from 'react';
+
 import { Text } from './text';
 import { jsxDecorator } from 'storybook-addon-jsx';
- 
+
 const meta = {
   title: 'Component/Text',
   decorators: [jsxDecorator],

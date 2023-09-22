@@ -6,8 +6,6 @@ import { render, screen } from '@testing-library/react';
 describe('Header', () => {
   it('renders Header component', async () => {
     render(<Header value={'h1'} headerTitle="Hello!" />);
-
-    screen.logTestingPlaygroundURL();
     const header1 = screen.getByRole('heading');
     expect(header1).toBeInTheDocument();
     expect(await screen.findByText(/Hello/)).toBeInTheDocument();
