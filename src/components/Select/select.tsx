@@ -19,7 +19,7 @@ export const Select: React.FC<SelectProps> = ({
 }: {
   onSelectChange: SelectChangeHandler;
 }) => {
-  const [selected, setSelected] = React.useState(options[0].value);
+  const [selected, setSelected] = React.useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newSelectValue = event.target.value;

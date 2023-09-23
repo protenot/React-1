@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-//import React from 'react';
 import { SelectTypeText, Option } from './selectText';
-import { jsxDecorator } from 'storybook-addon-jsx';
+
 //import { Option } from "../BlockRenderer/BlockRenderer"
+
 const optionsType: Option[] = [
   { value: 'normal', text: 'normal' },
   { value: 'italic', text: 'italic' },
@@ -11,24 +11,28 @@ const optionsType: Option[] = [
 
 const meta = {
   title: 'Component/SelectTypeText',
-  decorators: [jsxDecorator],
   component: SelectTypeText,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
+  argTypes: {
+    onSelectTypeChange: { action: 'selectedType' },
+    // options: optionsType as Option[],
+  },
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'center',
   },
 } satisfies Meta<typeof SelectTypeText>;
+
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
   args: {
     options: optionsType as Option[],
-    onSelectTypeChange: (selectedType: string) => {
-      console.log(`Selected value: ${selectedType}`);
-    },
+    onSelectTypeChange() {},
+    // (selectedType: string) => {
+    // console.log(`Selected value: ${selectedType}`);
+    //},
   },
 };
 /*
