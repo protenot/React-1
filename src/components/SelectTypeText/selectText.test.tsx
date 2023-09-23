@@ -9,7 +9,6 @@ const optionsType = [
   { value: 'italic', text: 'italic' },
   { value: 'oblique', text: 'oblique' },
 ];
-
 describe('SelectTypeText', () => {
   it('renders SelectType component', async () => {
     const onSelectChangeMock = jest.fn();

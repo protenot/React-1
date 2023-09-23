@@ -6,9 +6,6 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 describe('UnfoldingBlock', () => {
   it('renders UnfoldingBlock component', async () => {
     render(<UnfoldingBlock title={'News'} content={'Many news'} />);
-    screen.debug();
-    screen.logTestingPlaygroundURL();
-
     const title = screen.getByText(/news/i);
     expect(title).toBeInTheDocument();
 

@@ -12,7 +12,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {},
 } satisfies Meta<ImageProps>;
-
+ 
 export default meta;
 type Story = StoryObj<ImageProps>;
 

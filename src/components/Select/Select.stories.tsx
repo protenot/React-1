@@ -14,11 +14,11 @@ type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
   args: {
-    onSelectChange() {},
+    onSelectChange: { action: 'selected' },
   },
 };
 export const LoggedOut: Story = {
   args: {
-    onSelectChange: { value: options[2].value },
+    onSelectChange: { action: options[2].value },
   },
 };

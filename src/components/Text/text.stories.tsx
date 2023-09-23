@@ -1,16 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import { Text } from './text';
-import { jsxDecorator } from 'storybook-addon-jsx';
 
 const meta = {
   title: 'Component/Text',
-  decorators: [jsxDecorator],
   component: Text,
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-  //tags: ['autodocs'],
+  tags: ['autodocs'],
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'center',
   },
 } satisfies Meta<typeof Text>;
@@ -21,7 +16,16 @@ type Story = StoryObj<typeof meta>;
 export const LoggedIn: Story = {
   args: {
     font: 'italic',
-    textContent: '',
+    textContent:
+      'Joy prepared poor. Good believing prevent. Amiable admiration meritsresources waiting sight no father hunted plenty alteration mrs welcome nor. Since mutual little over betrayed returned elderly extremity girl wondered entrance herself amiable is behaved interested concluded. Change morning letter uneasy horses attempt sportsman spot we my.',
   },
 };
-//export const Default: React.FC<HTMLElement> = () => <Text font={'normal'} />;
+
+export const LoggedOut: Story = {
+  args: {
+    font: 'italic',
+    textContent:
+      'Travelling door compliment connection either however principles looking maids woman express excuse sweetness. Going distance dearest visited contented fine sorry declared though enjoyment give him melancholy innate sorry. Gone heart hundred settling newspaper greater numerous two. His blushes dare innate passage play position resolving desirous scale. Placing might attempt mile.',
+  },
+};
+ 
