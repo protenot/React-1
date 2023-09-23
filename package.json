@@ -10,6 +10,7 @@
     "lint:fix": "prettier --write . && eslint . --fix --ext .js,.jsx,.tsx",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
+    "deploy": "gh-pages -d storybook-static",
     "build-storybook": "storybook build",
     "loki:update": "npm run build-storybook && loki update --requireReference --reactUri file:./storybook-static"
   },
@@ -82,7 +83,7 @@
     "react-dom": "^18.2.0"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.js,*.ts, *tsx": "eslint --cache --fix"
   },
   "loki": {
     "configurations": {
