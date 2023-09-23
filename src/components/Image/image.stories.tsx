@@ -1,7 +1,7 @@
 import Img from '../../img/Kittens.jpg';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Image, ImageProps } from './image';
-
+ 
 const meta = {
   component: Image,
   title: 'Component/Image',

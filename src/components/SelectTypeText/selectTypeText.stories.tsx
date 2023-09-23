@@ -9,7 +9,7 @@ const meta = {
   argTypes: {
     onSelectTypeChange: { action: 'selected' },
   },
-  parameters: {
+  parameters: { 
     layout: 'center',
   },
 } satisfies Meta<typeof SelectTypeText>;

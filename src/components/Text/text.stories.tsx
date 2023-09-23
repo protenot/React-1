@@ -18,7 +18,7 @@ export const LoggedIn: Story = {
     font: 'italic',
     textContent:
       'Joy prepared poor. Good believing prevent. Amiable admiration meritsresources waiting sight no father hunted plenty alteration mrs welcome nor. Since mutual little over betrayed returned elderly extremity girl wondered entrance herself amiable is behaved interested concluded. Change morning letter uneasy horses attempt sportsman spot we my.',
-  },
+  }, 
 };
 
 export const LoggedOut: Story = {
