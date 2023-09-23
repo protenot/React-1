@@ -26,7 +26,7 @@ module.exports = {
     open: true,
     port: 8000,
     hot: true,
-    // for react router
+    disableHostCheck: true,
     historyApiFallback: true,
   },
   devtool:
