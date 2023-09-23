@@ -3,7 +3,6 @@ import { Header } from './header';
 
 const meta = {
   title: 'Component/Header',
-  //decorators: [jsxDecorator],
   component: Header,
   tags: ['autodocs'],
   parameters: {

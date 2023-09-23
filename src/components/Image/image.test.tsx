@@ -13,7 +13,7 @@ describe('Image', () => {
       />,
     );
     const displayedImage = screen.getByRole('img');
-    console.log(displayedImage);
+
     expect(displayedImage).toHaveAttribute('alt', 'Kittens');
   });
 });

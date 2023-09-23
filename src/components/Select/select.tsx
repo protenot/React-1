@@ -4,7 +4,7 @@ type SelectProps = {
   onSelectChange: SelectChangeHandler;
 };
 
-const options = [
+export const options = [
   { value: '', text: '--Choose an option--' },
   { value: 'Header', text: 'Header' },
   { value: 'Text', text: 'Text' },
