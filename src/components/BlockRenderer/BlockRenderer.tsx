@@ -33,8 +33,7 @@ export const optionsType = [
 export const BlockRenderer: React.FC<BlockRendererProps> = ({ blockType }) => {
   const [inputValue, setInputValue] = useState<string>('');
   const [selectedType, setSelectedType] = useState<string>('normal');
-  // const [inputTitle,setInputTitle] = useState('')
-  console.log(selectedType);
+
   switch (blockType) {
     case 'Header':
       return (

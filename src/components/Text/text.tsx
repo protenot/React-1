@@ -12,7 +12,6 @@ export const Text: React.FC<TextProps> = ({ font, textContent }) => {
     setFontState(font);
     setTextState(textContent);
   }, [font, textState]);
-  console.log(fontState);
 
   return (
     <p className="text" style={{ fontStyle: fontState }}>

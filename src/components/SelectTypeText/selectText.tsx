@@ -16,13 +16,11 @@ export const SelectTypeText: React.FC<SelectTypeProps> = ({
   onSelectTypeChange,
   options,
 }: SelectTypeProps) => {
-  // Фиксируем state
   const [selectedType, setSelectedType] = useState('normal');
-  //Обработчик select
+
   const handleSelectType = (event: ChangeEvent<HTMLSelectElement>) => {
-    //Присваиваем состояние
     const newTypeValue = event.target.value;
-    // Фиксируем новый стейт
+
     setSelectedType(newTypeValue);
     onSelectTypeChange(newTypeValue);
   };

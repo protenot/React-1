@@ -39,12 +39,9 @@ module.exports = {
     'react/display-name': 'off',
     'react/prop-types': 0,
     'no-undef': 'off',
-
     'import/prefer-default-export': 'off',
     'import/no-unresolved': 'off',
     'import/extensions': ['warn', 'never'],
-    //'@typescript-eslint/prefer-nullish-coalescing': 'off',
-    //'@typescript-eslint/strict-boolean-expressions': 'off',
     'linebreak-style': ['error', 'windows'],
     quotes: ['warn', 'single'],
     semi: ['warn', 'always'],
