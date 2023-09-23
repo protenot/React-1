@@ -13,7 +13,14 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:storybook/recommended',
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: ['webpack.config.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': ['off'],
+      },
+    },
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {

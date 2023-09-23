@@ -23,5 +23,5 @@ export const LoggedIn: Story = {
     font: 'italic',
     textContent: '',
   },
-};
+}; 
 //export const Default: React.FC<HTMLElement> = () => <Text font={'normal'} />;

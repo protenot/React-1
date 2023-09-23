@@ -27,4 +27,3 @@ export const LoggedOut: Story = {
     headerTitle: 'This is title for Loggedout',
   },
 };
-
